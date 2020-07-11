@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\gdini\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\gdini\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\ReSharperHost\v202\SolutionCaches\_GMTK-JAM2020.-504811099.00" t="ExcludeRecursive" />
+    <e p="D:\Documents\Unity\GMTK-JAM2020" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Map" t="Include">
+            <e p="LevelLayoutGenerator.cs" t="Include" />
+            <e p="TriggerExit.cs" t="Include" />
+          </e>
+          <e p="Scriptable" t="Include">
+            <e p="LevelChunkData.cs" t="Include" />
+          </e>
+          <e p="SimpleCameraController.cs" t="Include" />
+        </e>
+      </e>
+      <e p="GMTK-JAM2020.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

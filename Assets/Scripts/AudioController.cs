@@ -6,11 +6,14 @@ using Random = UnityEngine.Random;
 
 public class AudioController : MonoBehaviour
 {
+    public static AudioController instance;
     [SerializeField] private AudioSource controller;
     [SerializeField] private List<AudioClip> sounds;
 
     private void Awake()
     {
+        if (!instance) instance = this;
+        else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
     }
 

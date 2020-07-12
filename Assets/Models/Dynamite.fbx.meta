@@ -3,7 +3,17 @@ guid: 69d1ade7f4772954d81d6866c9a07f84
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dynamite
+    second: {fileID: 2100000, guid: e4539d964651d964ea4fd498e9b2d7d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Emissive
+    second: {fileID: 2100000, guid: 005fdb4473454454cbb6791fda56c285, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

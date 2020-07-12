@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2052807a6d40b14280fedc018350510, type: 3}
+  m_Name: Menu
+  m_EditorClassIdentifier: 
+  chunkSize: {x: 2, y: 2}
+  levelChunks:
+  - {fileID: 4441511272760168465, guid: 3458534a1fd15ee4480a0d5e51daf10d, type: 3}
+  entryDirection: 2
+  exitDirection: 0

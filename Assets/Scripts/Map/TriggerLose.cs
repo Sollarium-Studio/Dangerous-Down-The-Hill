@@ -5,17 +5,10 @@ namespace Map
     public class TriggerLose : MonoBehaviour
     {
         [SerializeField] private bool exited = false;
-        private void OnTriggerExit(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
-            CharacterController characterController = other.GetComponent<CharacterController>();
-            if (characterController != null)
-            {
-                if (!exited)
-                {
-                    exited = true;
-                    
-                }
-            }
+            if(other.CompareTag("Player"))
+                GameController.instance.GameOver();
         }
     }
 }

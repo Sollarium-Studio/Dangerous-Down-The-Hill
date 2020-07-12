@@ -8,27 +8,31 @@ namespace Map
         [SerializeField] private float side;
         [SerializeField] private float speed;
         [SerializeField] private bool goRight;
+        [SerializeField] private bool controlIsActive = true;
         private void Update()
         {
             transform.Translate(Vector3.up * (-speed * Time.deltaTime));
-            if (Input.GetMouseButton(0))
+            if (controlIsActive)
             {
-                if (goRight)
+                if (Input.GetMouseButton(0))
                 {
-                    transform.Translate(Vector3.right * side * Time.deltaTime);
+                    if (goRight)
+                    {
+                        transform.Translate(Vector3.right * side * Time.deltaTime);
+                    }
+                    else
+                    {
+                        transform.Translate(-Vector3.right * side * Time.deltaTime);
+                    }
                 }
-                else
-                {
-                    transform.Translate(-Vector3.right * side * Time.deltaTime);
-                }
-            }
 
-            if (Input.GetMouseButtonUp(0))
-            {
-                if (goRight)
-                    goRight = false;
-                else
-                    goRight = true;
+                if (Input.GetMouseButtonUp(0))
+                {
+                    if (goRight)
+                        goRight = false;
+                    else
+                        goRight = true;
+                }
             }
         }
     }

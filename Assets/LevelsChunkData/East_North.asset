@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2052807a6d40b14280fedc018350510, type: 3}
+  m_Name: East_North
+  m_EditorClassIdentifier: 
+  chunkSize: {x: 2, y: 2}
+  levelChunks:
+  - {fileID: 6089058930737185900, guid: 0943e9be35b9295478a6701f7d57ec5c, type: 3}
+  entryDirection: 1
+  exitDirection: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,11 @@ public class Menu : MonoBehaviour
             panelCredits.SetActive(false);
             panelMenu.SetActive(true);
         }
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
     }
 
     public void backMenu()

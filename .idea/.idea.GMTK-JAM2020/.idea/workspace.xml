@@ -25,18 +25,10 @@
     <list default="true" id="0d1206f1-b40b-46cc-97a2-587fe7d9ce8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GMTK-JAM2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GMTK-JAM2020/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GMTK-JAM2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GMTK-JAM2020/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/East_to_North.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/East_to_North.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Path_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Path_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Path_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Path_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Path_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Path_04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Path_05.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Path_05.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/South_to_East.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/South_to_East.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/South_to_West.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/South_to_West.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/West_to_North.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/West_to_North.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/TriggerLose.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/TriggerLose.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,15 +39,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../homework-platform/Assets/Firebase/Firebase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Firebase/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameOverPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../homework-platform/Assets/Helper/Singleton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/MoveMap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SnowBall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/TriggerExit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Firebase/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RestClient/DemoScene/Scripts/Model/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptable/LevelChunkData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/LevelLayoutGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/CharacterController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Firebase/Firebase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/TriggerLose.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -68,10 +68,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/MoveMap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/TriggerExit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/LevelLayoutGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SnowBall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/TriggerLose.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Map/CharacterController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Firebase/Singleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/RestClient/DemoScene/Scripts/Model/User.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GameOverPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Firebase/User.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Firebase/Firebase.cs" />
       </list>
     </option>
   </component>
@@ -123,7 +129,7 @@
       <updated>1594488121851</updated>
       <workItem from="1594488163287" duration="12015000" />
       <workItem from="1594510882618" duration="2005000" />
-      <workItem from="1594513493931" duration="6860000" />
+      <workItem from="1594513493931" duration="12434000" />
     </task>
     <servers />
   </component>

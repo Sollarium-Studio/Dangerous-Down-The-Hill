@@ -6,8 +6,9 @@ namespace Map
     public class TriggerExit : MonoBehaviour
     {
         public float delay = 5f;
-    
+
         public delegate void ExitAction();
+
         public static event ExitAction OnChunkExited;
 
         [SerializeField] private bool exited = false;
@@ -33,7 +34,6 @@ namespace Map
             yield return new WaitForSeconds(delay);
 
             Destroy(transform.root.gameObject);
-
         }
     }
 }

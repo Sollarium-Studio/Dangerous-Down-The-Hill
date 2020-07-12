@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
     public bool gameCredits;
     public bool gameMenu;
     public GameObject panelCredits;
+
     public GameObject panelMenu;
+
+    public Text bestScore;
     //public GameObject creditsButton;
 
     public void inCredits()
     {
-        if(gameCredits == false)
+        if (gameCredits == false)
         {
             gameCredits = true;
             gameMenu = false;
@@ -34,6 +34,14 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1.0f;
+        if (PlayerPrefs.HasKey("BestScore"))
+        {
+            bestScore.text = $"BEST SCORE: {PlayerPrefs.GetFloat("BestScore")}";
+        }
+        else
+        {
+            bestScore.text = $"BEST SCORE: 0";
+        }
     }
 
     public void backMenu()
@@ -50,6 +58,4 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
-
-         
 }

@@ -16,9 +16,12 @@ namespace Map
         private Vector3 _spawnPosition;
         public int chunksToSpawn = 10;
 
-        [SerializeField] private float timeSpawn;
-        [SerializeField] private float timeToSpawn = 0.99f;
-        
+
+        [SerializeField] private GameObject dynamitePrefab;
+        [SerializeField] private Transform dynamiteSpawn;
+        [SerializeField] private bool spawnDynamite = true;
+
+
         void OnEnable()
         {
             TriggerExit.OnChunkExited += PickAndSpawnChunk;
@@ -28,7 +31,7 @@ namespace Map
         {
             TriggerExit.OnChunkExited -= PickAndSpawnChunk;
         }
-        
+
         void Start()
         {
             _previousChunk = firstChunk;
@@ -39,26 +42,27 @@ namespace Map
             }
         }
 
-        private void Update()
-        {
-            // timeSpawn += Time.deltaTime;
-            // if (timeSpawn >= timeToSpawn)
-            // {
-            //     PickAndSpawnChunk();
-            //     timeSpawn = 0.0f;
-            // }
-        }
-
         void PickAndSpawnChunk()
         {
             LevelChunkData chunkToSpawn = PickNextChunk();
 
             GameObject objectFromChunk = chunkToSpawn.levelChunks[Random.Range(0, chunkToSpawn.levelChunks.Length)];
             _previousChunk = chunkToSpawn;
-            Instantiate(objectFromChunk, _spawnPosition + spawnOrigin, objectFromChunk.transform.rotation);
+            if (spawnDynamite)
+            {
+                if (chunkToSpawn.entryDirection == LevelChunkData.Direction.South)
+                {
+                    if (Random.Range(0.0f, 50.0f) < 5.0f)
+                    {
+                        var pos = _spawnPosition + spawnOrigin + new Vector3(0.0f, 0.5f, -1.0f);
+                        Instantiate(dynamitePrefab, pos, dynamitePrefab.transform.rotation);
+                    }
+                }
+            }
 
+            Instantiate(objectFromChunk, _spawnPosition + spawnOrigin, objectFromChunk.transform.rotation);
         }
-        
+
         LevelChunkData PickNextChunk()
         {
             List<LevelChunkData> allowedChunkList = new List<LevelChunkData>();
@@ -89,21 +93,20 @@ namespace Map
                 default:
                     break;
             }
-            
+
             foreach (var t in levelChunkData)
             {
-                if(t.entryDirection == nextRequiredDirection)
+                if (t.entryDirection == nextRequiredDirection)
                 {
                     allowedChunkList.Add(t);
                 }
             }
-        
+
             nextChunk = allowedChunkList[Random.Range(0, allowedChunkList.Count)];
 
             return nextChunk;
-
         }
-        
+
         public void UpdateSpawnOrigin(Vector3 originDelta)
         {
             spawnOrigin = spawnOrigin + originDelta;

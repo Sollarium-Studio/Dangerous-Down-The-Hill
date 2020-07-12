@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScaleUI : MonoBehaviour
 {
@@ -18,4 +16,3 @@ public class ScaleUI : MonoBehaviour
         transform.localScale = m_Scale + Vector3.one * Mathf.Sin(Time.time * m_SmoothTime) * m_Range;
     }
 }
-

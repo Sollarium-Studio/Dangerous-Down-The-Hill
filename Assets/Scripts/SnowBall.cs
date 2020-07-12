@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SnowBall : MonoBehaviour
 {
@@ -31,5 +28,11 @@ public class SnowBall : MonoBehaviour
     {
         if (other.CompareTag("Player"))
             GameController.instance.GameOver();
+        if (other.CompareTag("Dynamite"))
+        {
+            var go = other.gameObject;
+            Destroy(go);
+            transform.localScale = new Vector3(100f, 100f, 100f);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Map
 {
@@ -14,24 +15,27 @@ namespace Map
             transform.Translate(Vector3.up * (-speed * Time.deltaTime));
             if (controlIsActive)
             {
-                if (Input.GetMouseButton(0))
+                if (!EventSystem.current.IsPointerOverGameObject())
                 {
-                    if (goRight)
+                    if (Input.GetMouseButton(0))
                     {
-                        transform.Translate(Vector3.right * side * Time.deltaTime);
+                        if (goRight)
+                        {
+                            transform.Translate(Vector3.right * side * Time.deltaTime);
+                        }
+                        else
+                        {
+                            transform.Translate(-Vector3.right * side * Time.deltaTime);
+                        }
                     }
-                    else
-                    {
-                        transform.Translate(-Vector3.right * side * Time.deltaTime);
-                    }
-                }
 
-                if (Input.GetMouseButtonUp(0))
-                {
-                    if (goRight)
-                        goRight = false;
-                    else
-                        goRight = true;
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        if (goRight)
+                            goRight = false;
+                        else
+                            goRight = true;
+                    }
                 }
             }
         }

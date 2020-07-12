@@ -53,7 +53,7 @@
           <e p="Firebase" t="Include">
             <e p="Firebase.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
-            <e p="User.cs" t="Include" />
+            <e p="UserScore.cs" t="Include" />
           </e>
           <e p="GameController.cs" t="Include" />
           <e p="Map" t="Include">

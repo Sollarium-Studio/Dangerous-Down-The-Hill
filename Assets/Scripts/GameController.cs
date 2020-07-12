@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -11,7 +7,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private double score;
     [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private Text scoreText;
 
     private void Awake()
     {

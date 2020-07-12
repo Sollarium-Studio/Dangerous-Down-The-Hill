@@ -15,7 +15,6 @@ namespace Firebase
         private void Awake()
         {
             FirebaseUrl = firebaseUrl;
-            GetUsers();
         }
 
         public string GenerateID()
@@ -23,11 +22,12 @@ namespace Firebase
             return Guid.NewGuid().ToString("N");
         }
 
-        public void RegisterNewUser(User user, Action onSuccess, Action onError)
+        public void RegisterNewUser(UserScore userScore, Action onSuccess, Action onError)
         {
-            user.userId = GenerateID();
-            Debug.Log(user);
-            RestClient.Put<User>($"${Instance.FirebaseUrl}Teste/{user.userId}.json", user).Then(postUser =>
+            var id = GenerateID();
+            userScore.userId = id;
+            Debug.Log(userScore);
+            RestClient.Put<UserScore>($"${Instance.FirebaseUrl}scores/{id}.json", userScore).Then(postUser =>
             {
                 Debug.Log($"Score Resgistered!!!");
                 onSuccess();
@@ -35,14 +35,6 @@ namespace Firebase
             {
                 Debug.Log($"Error: {error}");
                 onError();
-            });
-        }
-
-        public void GetUsers()
-        {
-            RestClient.Get($"{FirebaseUrl}users").Then(obj =>
-            {
-                Debug.Log(obj.ToString());
             });
         }
     }

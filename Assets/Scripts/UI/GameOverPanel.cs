@@ -26,7 +26,7 @@ public class GameOverPanel : Singleton<GameOverPanel>
         var score = GameController.instance.GetScore();
         var nick = nickInputField.text;
 
-        User user = new User(nick, score);
-        Firebase.Firebase.Instance.RegisterNewUser(user, () => SceneManager.LoadScene("Menu"),() => SceneManager.LoadScene("Menu"));
+        UserScore userScore = new UserScore(nick, score);
+        Firebase.Firebase.Instance.RegisterNewUser(userScore, () => SceneManager.LoadScene("Menu"),() => SceneManager.LoadScene("Menu"));
     }
 }

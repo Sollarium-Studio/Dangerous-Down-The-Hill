@@ -3,12 +3,12 @@ using UnityEditor;
 using Models;
 using Proyecto26;
 using System.Collections.Generic;
+using Firebase;
 using UnityEngine.Networking;
-using User = Firebase.User;
 
 public class MainScript : MonoBehaviour {
 
-	private readonly string basePath = "https://jsonplaceholder.typicode.com";
+	private readonly string basePath = "https://ddth-game.firebaseio.com/";
 	private RequestHelper currentRequest;
 
 	private void LogMessage(string title, string message) {
@@ -31,9 +31,9 @@ public class MainScript : MonoBehaviour {
 			return RestClient.GetArray<Todo>(basePath + "/todos");
 		}).Then(res => {
 			this.LogMessage("Todos", JsonHelper.ArrayToJsonString<Todo>(res, true));
-			return RestClient.GetArray<User>(basePath + "/users");
+			return RestClient.GetArray<UserScore>(basePath + "/users");
 		}).Then(res => {
-			this.LogMessage("Users", JsonHelper.ArrayToJsonString<User>(res, true));
+			this.LogMessage("Users", JsonHelper.ArrayToJsonString<UserScore>(res, true));
 
 			// We can add specific options and override default headers for a request
 			requestOptions = new RequestHelper { 

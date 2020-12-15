@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] private string gameSceneName;
     public bool gameCredits;
     public bool gameMenu;
     public GameObject panelCredits;
@@ -51,7 +52,7 @@ public class Menu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(gameSceneName);
     }
 
     public void Quit()

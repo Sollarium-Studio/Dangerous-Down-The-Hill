@@ -7359,7 +7359,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 723293769}
-        m_MethodName: backMenu
+        m_MethodName: BackMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7589,7 +7589,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 723293769}
-        m_MethodName: inCredits
+        m_MethodName: InCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

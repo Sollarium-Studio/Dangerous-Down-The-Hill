@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
     public Text bestScore;
     //public GameObject creditsButton;
 
-    public void inCredits()
+    public void InCredits()
     {
         if (gameCredits == false)
         {
@@ -45,9 +45,9 @@ public class Menu : MonoBehaviour
         }
     }
 
-    public void backMenu()
+    public void BackMenu()
     {
-        inCredits();
+        InCredits();
     }
 
     public void Play()
